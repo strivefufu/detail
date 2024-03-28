@@ -6,7 +6,7 @@ import {
 import { useNavigate } from 'react-router'
 
 const Swiper = ({data}) => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   return (
     <div>
     {/*  <img src={data.imageUrl} style={{width:'100px'}}/> */} 
