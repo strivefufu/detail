@@ -1,27 +1,21 @@
-import React from 'react'
-import Swiper from './components/swiper/myswiper'
-import Restinfo from "./components/restinfo/restinfo"
-import Usercomment from './components/usercomment/usercomment'
+import React from 'react';  
+import SwiperN from './components/Swiper/Swiper';  
+import UserInfo from './components/UserInfo/UserInfo';  
+import Details from './components/Details/Details';  
+import Content from './components/content/content'
+import Comment from './components/comment/comment'
 
-const data = [
-  'https://zos.alipayobjects.com/rmsportal/AiyWuByWklrrUDlFignR.png',
-  'https://zos.alipayobjects.com/rmsportal/TekJlZRVCjLFexlOCuWn.png',
-  'https://zos.alipayobjects.com/rmsportal/IJOtIlfsYdTyaDTRVrLI.png',
-];
-
-<Swiper loop autoplay>
-{datas}
-</Swiper>
-
-const Food = () => {
-  return (
-
-      <div>
-      <Swiper data={data}/>
-      <Restinfo />
-      <Usercomment />
-    </div>
-  )
-}
-
-export default Food
+  
+const Detaillog = () => {  
+  return (  
+    <div className="banner-with-user-info-container">  
+      <SwiperN />  
+      <UserInfo />  
+      <Details />  
+      <Content/>
+      <Comment/>
+    </div>  
+  );  
+};  
+  
+export default Detaillog;

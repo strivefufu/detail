@@ -1,30 +1,23 @@
-import React from 'react'
-import styles from "./swiper.css"
-import {
-  LeftOutlined
-} from "@ant-design/icons"
-import { useNavigate } from 'react-router'
+import React from 'react';
+import { Swiper } from 'antd-mobile';
+import './Swiper.less';
 
-const Swiper = ({data}) => {
-  // const navigate = useNavigate()
-  return (
-    <div>
-    {/*  <img src={data.imageUrl} style={{width:'100px'}}/> */} 
-    {data.map((data, index) => (  
-        <img  
-          key={index} // 使用索引作为key，但在实际生产环境中，最好使用每张图片的唯一标识符  
-          src={data}  
-          style={{ width: '100px', marginRight: '10px' }} // 添加一些间距以便更好地查看每张图片  
-        /> 
-    ))}
-      </div>
+const bannerList = [
+    'https://zos.alipayobjects.com/rmsportal/AiyWuByWklrrUDlFignR.png',
+    'https://zos.alipayobjects.com/rmsportal/TekJlZRVCjLFexlOCuWn.png',
+    'https://zos.alipayobjects.com/rmsportal/IJOtIlfsYdTyaDTRVrLI.png',];  
 
-    // <div className={styles.swiperbox}>
-    //   <LeftOutlined style={{position:'absolute',left:'0.7rem',top:'0.8rem',fontSize:'18px'}} onClick={() => navigate('/')}/>
-    // </div>
-  )
-    
-}
+const items = bannerList.map((item, index) => (
+  <Swiper.Item key={index}>
+    <img src={item} alt='' />
+  </Swiper.Item>
+));
 
+const SwiperN = ()=>{
+    return (
+        <Swiper loop autoplay className="banner-container">
+            {items}
+        </Swiper>
+    )}
 
-export default Swiper
+export default SwiperN;

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Detail from './pages/Detail/Detail';
+import Detaillog from './pages/Detaillog/Detaillog';
+// import Home from './pages/Home/Home'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -9,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Detail/>
+      <Detaillog/>
     </Router>
     
   </React.StrictMode>
