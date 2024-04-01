@@ -1,18 +1,23 @@
 import React from 'react';
 
-import './comment.less';
+import './comment.css';
 
 const Comment = () => {
     return (
-        <div style={{ padding: '20px', background: '#fff' }}>
-            <h2>用户评论</h2>
-            {/* 在这里添加评论内容，可以使用普通的HTML元素和样式 */}
-            <div>
-                <p>用户A：这个地方很棒！</p>
-                <p>用户B：我也觉得很不错。</p>
-                {/* 可以继续添加其他评论内容 */}
-            </div>
+        <div className="commentsWrapper">
+        <div className="header">
+          <h2>用户评论</h2>
         </div>
+        <div className="comments">
+          <div className="comment">
+            <p>用户A：这个地方很棒！</p>
+          </div>
+          <div className="comment">
+            <p>用户B：我也觉得很不错。</p>
+          </div>
+          {/* 可以继续添加其他评论内容 */}
+        </div>
+      </div>
 
     );
 };
